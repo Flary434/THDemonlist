@@ -4,7 +4,7 @@ export default {
             type: String,
             required: true,
         },
-        verifier: {
+        first_victor: {
             type: String,
             required: true,
         },
