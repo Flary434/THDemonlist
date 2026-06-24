@@ -4,10 +4,6 @@ export default {
             type: String,
             required: true,
         },
-        creators: {
-            type: Array,
-            required: false,
-        },
         verifier: {
             type: String,
             required: true,
