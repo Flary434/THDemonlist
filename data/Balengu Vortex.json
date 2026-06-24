@@ -1,0 +1,25 @@
+{
+    "id": 0,
+    "name": "Balengu Vortex",
+    "author": "Temp",
+    "first_victor": "Kezipher",
+    "verification": "https://www.youtube.com/watch?v=qGgHxGWKhc8",
+    "records": [
+        {
+            "user": "Kezipher",
+            "link": "https://www.youtube.com/watch?v=qGgHxGWKhc8"
+        },
+        {
+            "user": "RomeNunt",
+            "link": "https://www.youtube.com/watch?v=p9e9AnR6wdk"
+        },
+        {
+            "user": "Zagittariuz",
+            "link": "https://youtu.be/R4MqWXQlhAo?si=SZTiJrAEGXoOnaNw"
+        },
+        {
+            "user": "ryanbcgd",
+            "link": "https://youtu.be/H55kMcQrHrU?si=SfxsHpsOWk0pvcB2"
+        }
+    ]
+}

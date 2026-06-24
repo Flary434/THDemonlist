@@ -1,0 +1,25 @@
+{
+    "id": 0,
+    "name": "Cat Planet",
+    "author": "IcEDCave",
+    "first_victor": "Swansong",
+    "verification": "https://www.youtube.com/watch?v=h-oBBCQvW-c",
+    "records": [
+        {
+            "user": "Swansong",
+            "link": "https://www.youtube.com/watch?v=h-oBBCQvW-c"
+        },
+        {
+            "user": "Purin",
+            "link": "https://youtu.be/xV1pWQR4XBw"
+        },
+        {
+            "user": "SoniL",
+            "link": "https://www.youtube.com/watch?v=8ee1dax8HC8"
+        },
+        {
+            "user": "Ofe",
+            "link": "https://youtu.be/Wbuw7nOI8F8"
+        }
+    ]
+}

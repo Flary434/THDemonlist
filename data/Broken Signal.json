@@ -1,0 +1,29 @@
+{
+    "id": 0,
+    "name": "Broken Signal",
+    "author": "Grax",
+    "first_victor": "HugOFF",
+    "verification": "https://www.youtube.com/watch?v=Di4z2KkgNl4",
+    "records": [
+        {
+            "user": "HugOFF",
+            "link": "https://www.youtube.com/watch?v=Di4z2KkgNl4"
+        },
+        {
+            "user": "Epereu",
+            "link": "https://youtu.be/1tSOARHkOMk?si=ZwRo6LZW7ydX23_5"
+        },
+        {
+            "user": "RomeNunt",
+            "link": "https://youtu.be/TbLOisif5Vc?si=Os82wHJgpqESYZ3g"
+        },
+        {
+            "user": "RandomCrazyGuy",
+            "link": "https://youtu.be/pN5zSkEv4xE?si=4jZx2YZ9qI6C5eEF"
+        },
+        {
+            "user": "Removance",
+            "link": "https://youtu.be/kI2gy-99SYw?si=UhEkcQZhJ4A56Poz"
+        }
+    ]
+}

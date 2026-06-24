@@ -1,0 +1,17 @@
+{
+    "id": 0,
+    "name": "Incipient",
+    "author": "Jenkins",
+    "first_victor": "HugOFF",
+    "verification": "https://www.youtube.com/watch?v=eOH73bsQJic",
+    "records": [
+        {
+            "user": "HugOFF",
+            "link": "https://www.youtube.com/watch?v=eOH73bsQJic"
+        },
+        {
+            "user": "RandomCrazyGuy",
+            "link": "https://www.youtube.com/watch?v=dT9_tHhPMdU"
+        }
+    ]
+}

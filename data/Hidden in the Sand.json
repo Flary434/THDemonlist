@@ -1,0 +1,29 @@
+{
+    "id": 0,
+    "name": "Hidden in the Sand",
+    "author": "ASBCHazel",
+    "first_victor": "SnowyDaFox",
+    "verification": "https://www.youtube.com/watch?v=h5kHEyDCBQY",
+    "records": [
+        {
+            "user": "SnowyDaFox",
+            "link": "https://www.youtube.com/watch?v=h5kHEyDCBQY"
+        },
+        {
+            "user": "SoniL",
+            "link": "https://youtu.be/facOkIo9jsE"
+        },
+        {
+            "user": "RandomCrazyGuy",
+            "link": "https://www.youtube.com/watch?v=wPlci4g_Rmc"
+        },
+        {
+            "user": "Ofe",
+            "link": "https://youtu.be/YHXKOu_Cclk?si=2cYzR-xTYxgGmrrz"
+        },
+        {
+            "user": "Removance",
+            "link": "https://youtu.be/5ir00UwLJ9c?si=rj2_DmXemrAWZ_wP"
+        }
+    ]
+}

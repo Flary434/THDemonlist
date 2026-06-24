@@ -1,0 +1,37 @@
+{
+    "id": 0,
+    "name": "9blue",
+    "author": "Sardina",
+    "first_victor": "Piwot",
+    "verification": "https://youtu.be/nJxNzEqD-FE",
+    "records": [
+        {
+            "user": "Piwot",
+            "link": "https://youtu.be/nJxNzEqD-FE"
+        },
+        {
+            "user": "RandomCrazyGuy",
+            "link": "https://www.youtube.com/watch?v=SrfTznKoX2U"
+        },
+        {
+            "user": "Removance",
+            "link": "https://youtu.be/9wi_GktmRPQ?si=SOTkD-z3qs7E_6VW"
+        },
+        {
+            "user": "ZeouniX",
+            "link": "https://youtu.be/DpCmGt9Yepc"
+        },
+        {
+            "user": "Epereu",
+            "link": "https://youtu.be/XoMXlI_zOOk"
+        },
+        {
+            "user": "nolli",
+            "link": "https://youtu.be/gL63joRGHrI"
+        },
+        {
+            "user": "Ofe",
+            "link": "https://youtu.be/SX_79OYWOnc?si=SkSZRjOwyjK3_CIo"
+        }
+    ]
+}

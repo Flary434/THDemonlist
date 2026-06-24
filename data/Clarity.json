@@ -1,0 +1,41 @@
+{
+    "id": 0,
+    "name": "Clarity",
+    "author": "Hypno",
+    "first_victor": "Epereu",
+    "verification": "https://www.youtube.com/watch?v=9b0uJRpesU8",
+    "records": [
+        {
+            "user": "Epereu",
+            "link": "https://www.youtube.com/watch?v=9b0uJRpesU8"
+        },
+        {
+            "user": "Removance",
+            "link": "https://youtu.be/Q4Dy6hT52IE?si=-FXg4b99lOCM26rC"
+        },
+        {
+            "user": "TTPL",
+            "link": "https://youtu.be/1S0dFQnSxwQ"
+        },
+        {
+            "user": "SnowyDaFox",
+            "link": "https://youtu.be/nAuom6NRYp4?si=nF7I0Q36T0kih6ov"
+        },
+        {
+            "user": "Ofe",
+            "link": "https://youtu.be/tS3ZXy5nb4Y"
+        },
+        {
+            "user": "RandomCrazyGuy",
+            "link": "https://www.youtube.com/watch?v=mi8hyysWnA8"
+        },
+        {
+            "user": "SoniL",
+            "link": "https://youtu.be/avd8K9kjJ7s"
+        },
+        {
+            "user": "nekopuri",
+            "link": "https://youtu.be/aEvxFNC1a1M"
+        }
+    ]
+}

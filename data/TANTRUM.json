@@ -1,0 +1,21 @@
+{
+    "id": 0,
+    "name": "TANTRUM",
+    "author": "Danzmen",
+    "first_victor": "RandomCrazyGuy",
+    "verification": "https://www.youtube.com/watch?v=j5gIcd3FIys",
+    "records": [
+        {
+            "user": "RandomCrazyGuy",
+            "link": "https://www.youtube.com/watch?v=j5gIcd3FIys"
+        },
+        {
+            "user": "Removance",
+            "link": "https://youtu.be/oxpaglQawQI?si=d4pkD7Tb50sNSkD9"
+        },
+        {
+            "user": "Ofe",
+            "link": "https://youtu.be/aoJwn3rty7o"
+        }
+    ]
+}

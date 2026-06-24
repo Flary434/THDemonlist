@@ -1,0 +1,21 @@
+{
+    "id": 0,
+    "name": "Brain Power",
+    "author": "Zafkiel7",
+    "first_victor": "StupidArt",
+    "verification": "https://www.youtube.com/watch?v=qz7sjvuzSS0",
+    "records": [
+        {
+            "user": "StupidArt",
+            "link": "https://www.youtube.com/watch?v=qz7sjvuzSS0"
+        },
+        {
+            "user": "Epereu",
+            "link": "https://www.youtube.com/watch?v=cqvGJhmx1DA"
+        },
+        {
+            "user": "Removance",
+            "link": "https://youtu.be/Gr3iRoylUsU?si=H3JhEEaBIt6Z5pU-"
+        }
+    ]
+}

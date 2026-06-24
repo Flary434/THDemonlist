@@ -1,0 +1,17 @@
+{
+    "id": 0,
+    "name": "Meltdown",
+    "author": "Darwin",
+    "first_victor": "HugOFF",
+    "verification": "https://www.youtube.com/watch?v=ezEbFRYILTo",
+    "records": [
+        {
+            "user": "HugOFF",
+            "link": "https://www.youtube.com/watch?v=ezEbFRYILTo"
+        },
+        {
+            "user": "Removance",
+            "link": "https://youtu.be/gPttqtR3rNA?si=r9NV8EDnuGrXPapq"
+        }
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "id": 0,
+    "name": "Prismatic",
+    "author": "CatGeo",
+    "first_victor": "RandomCrazyGuy",
+    "verification": "https://www.youtube.com/watch?v=OlwaBT92_Js",
+    "records": [
+        {
+            "user": "RandomCrazyGuy",
+            "link": "https://www.youtube.com/watch?v=OlwaBT92_Js"
+        },
+        {
+            "user": "StupidArt",
+            "link": "https://youtu.be/y9JR-Nw9V-s"
+        },
+        {
+            "user": "ThJeng",
+            "link": "https://youtu.be/XzwA3G9B1qc"
+        },
+        {
+            "user": "Removance",
+            "link": "https://youtu.be/5Zu-ohHX-GQ?si=Sbu5aYAh2mkrUZHc"
+        }
+    ]
+}

@@ -1,0 +1,41 @@
+{
+    "id": 0,
+    "name": "Sweater Weather",
+    "author": "VelYT",
+    "first_victor": "PinkMatrix",
+    "verification": "https://youtube.com/watch?v=JildSqz8MQ0",
+    "records": [
+        {
+            "user": "PinkMatrix",
+            "link": "https://youtube.com/watch?v=JildSqz8MQ0"
+        },
+        {
+            "user": "Removance",
+            "link": "https://youtu.be/IvBlxf7k9Jc?si=EhPj9gv0zI-XUgzo"
+        },
+        {
+            "user": "Ofe",
+            "link": "https://www.youtube.com/watch?v=SyiVgRTb7z4"
+        },
+        {
+            "user": "LoreFreak",
+            "link": "https://www.youtube.com/watch?v=ev5vD6-vxZw"
+        },
+        {
+            "user": "EpixsGD",
+            "link": "https://www.youtube.com/watch?v=KRYCV8Mrl84"
+        },
+        {
+            "user": "SoniL",
+            "link": "https://youtu.be/sZxxuMmYu3E"
+        },
+        {
+            "user": "cytoxysm",
+            "link": "https://youtu.be/OgmgsI16yW4?si=F7xXoiitzp3_wj90"
+        },
+        {
+            "user": "Naii4TDS",
+            "link": "https://youtu.be/xfgTqvDQbz4?si=ki2-BFo9ofpIX7nR"
+        }
+    ]
+}
