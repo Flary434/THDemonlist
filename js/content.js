@@ -18,8 +18,9 @@ export async function fetchList() {
                         {
                             ...level,
                             path,
+                            // Safely sort records. If percent is missing, assume it's 100.
                             records: level.records.sort(
-                                (a, b) => b.percent - a.percent,
+                                (a, b) => (b.percent !== undefined ? b.percent : 100) - (a.percent !== undefined ? a.percent : 100),
                             ),
                         },
                         null,
@@ -51,16 +52,18 @@ export async function fetchLeaderboard() {
 
     const scoreMap = {};
     const errs = [];
+    
     list.forEach(([level, err], rank) => {
         if (err) {
             errs.push(err);
             return;
         }
 
-        // Verification
+        // Verification (Check for verifier OR first_victor)
+        const verifierName = level.verifier || level.first_victor || "";
         const verifier = Object.keys(scoreMap).find(
-            (u) => u.toLowerCase() === (level.verifier || level.first_victor || "").toLowerCase(),
-        ) || level.verifier || level.first_victor || "";
+            (u) => u.toLowerCase() === verifierName.toLowerCase(),
+        ) || verifierName;
 
         if (verifier) {
             scoreMap[verifier] ??= {
@@ -73,42 +76,41 @@ export async function fetchLeaderboard() {
                 rank: rank + 1,
                 level: level.name,
                 score: score(level.nlw_tier),
-                          link: level.verification,
+                link: level.verification,
             });
         }
 
-        // Records
+        // Records (Completions)
         if (level.records) {
             level.records.forEach((record) => {
-                // Skip records with a percent explicitly lower than 100
+                // If a percent is specified and it's less than 100, skip it!
                 if (record.percent !== undefined && record.percent < 100) {
                     return;
                 }
 
-                // Find the user or create a new entry for them
+                // Find the user case-insensitively
                 const user = Object.keys(scoreMap).find(
                     (u) => u.toLowerCase() === record.user.toLowerCase(),
                 ) || record.user;
-
+                
                 scoreMap[user] ??= {
                     verified: [],
                     completed: [],
                     progressed: [],
                 };
-
-                // Award the full NLW points to the player!
+                
                 const { completed } = scoreMap[user];
                 completed.push({
                     rank: rank + 1,
                     level: level.name,
                     score: score(level.nlw_tier),
-                               link: record.link,
+                    link: record.link,
                 });
             });
         }
     });
 
-// Wrap in extra Object containing the user and total score
+    // Wrap in extra Object containing the user and total score
     const res = Object.entries(scoreMap).map(([user, scores]) => {
         const { verified, completed, progressed } = scores;
         const total = [verified, completed, progressed]
