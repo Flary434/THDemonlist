@@ -1,6 +1,7 @@
-/**
- * Numbers of decimal digits to round to
- */
+// Original TSL template formula
+/*
+  Numbers of decimal digits to round to
+  /
 const scale = 3;
 
 /**
@@ -9,8 +10,8 @@ const scale = 3;
  * @param {Number} percent Percentage of completion
  * @param {Number} minPercent Minimum percentage required
  * @returns {Number}
- */
-export function score(rank, percent, minPercent) {
+
+    export function score(rank, percent, minPercent) {
     if (rank > 150) {
         return 0;
     }
