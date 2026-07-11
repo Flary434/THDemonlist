@@ -83,6 +83,11 @@ export async function fetchLeaderboard() {
         // Records (Completions)
         if (level.records) {
             level.records.forEach((record) => {
+                // Skip if the user is the first victor to avoid duplicate points
+                if (verifierName && record.user.toLowerCase() === verifierName.toLowerCase()) {
+                    return;
+                }
+
                 // If a percent is specified and it's less than 100, skip it!
                 if (record.percent !== undefined && record.percent < 100) {
                     return;
