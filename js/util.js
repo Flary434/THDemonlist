@@ -5,6 +5,11 @@ export function getYoutubeIdFromUrl(url) {
     )?.[1] ?? '';
 }
 
+// Remove decimals
+export function localize(num) {
+    return num.toLocaleString();
+}
+
 export function embed(video) {
     return `https://www.youtube.com/embed/${getYoutubeIdFromUrl(video)}`;
 }
