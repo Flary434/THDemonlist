@@ -24,6 +24,7 @@ export function score(rank, percent, minPercent) {
         ((percent - (minPercent - 1)) / (100 - (minPercent - 1)));
     */
     // New formula
+    /*
     let score = (-24.9975*Math.pow(rank-1, 0.4) + 200) *
         ((percent - (minPercent - 1)) / (100 - (minPercent - 1)));
 
@@ -35,20 +36,35 @@ export function score(rank, percent, minPercent) {
 
     return Math.max(round(score), 0);
 }
+*/
+    // Formula based of what GDTH Demonlist uses
+
+const TIER_POINTS = {
+    "Beginner": 10,
+    "Easy": 20,
+    "Medium": 30,
+    "Hard": 50,
+    "Very Hard": 75,
+    "Insane": 100,
+    "Extreme": 150,
+    "Remorseless": 200,
+    "Relentless": 275,
+    "Terrifying": 350,
+    "Catastrophic": 450,
+    "Inexorable": 575,
+    "Excruciating": 700,
+};
+
+/**
+ * Calculates the score for a level based on its NLW Tier
+ * @param {string} tier - Tier of the levels
+ * @returns {number} The points awarded for that tier
+ */
+export function score(tier) {
+    return TIER_POINTS[tier] || 0;
+}
 
 export function round(num) {
-    if (!('' + num).includes('e')) {
-        return +(Math.round(num + 'e+' + scale) + 'e-' + scale);
-    } else {
-        var arr = ('' + num).split('e');
-        var sig = '';
-        if (+arr[1] + scale > 0) {
-            sig = '+';
-        }
-        return +(
-            Math.round(+arr[0] + 'e' + sig + (+arr[1] + scale)) +
-            'e-' +
-            scale
-        );
-    }
+    let ret = Number(Math.round(num + "e3") + "e-3");
+    return ret < 0 ? 0 : ret;
 }
