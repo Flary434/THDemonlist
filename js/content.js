@@ -58,13 +58,11 @@ export async function fetchLeaderboard() {
         }
 
         // Verification
-        const rawVerifier = level.verifier || level.first_victor || "";
+        const verifier = Object.keys(scoreMap).find(
+            (u) => u.toLowerCase() === (level.verifier || level.first_victor || "").toLowerCase(),
+        ) || level.verifier || level.first_victor || "";
 
-        if (rawVerifier !== "") {
-            const verifier = Object.keys(scoreMap).find(
-                (u) => u.toLowerCase() === rawVerifier.toLowerCase(),
-            ) || rawVerifier;
-
+        if (verifier) {
             scoreMap[verifier] ??= {
                 verified: [],
                 completed: [],
@@ -80,30 +78,34 @@ export async function fetchLeaderboard() {
         }
 
         // Records
-        level.records.forEach((record) => {
-            // Ignore anyone who doesn't have 100%
-            if (record.percent !== 100) {
-                return;
-            }
+        if (level.records) {
+            level.records.forEach((record) => {
+                // Skip records with a percent explicitly lower than 100
+                if (record.percent !== undefined && record.percent < 100) {
+                    return;
+                }
 
-            const user = Object.keys(scoreMap).find(
-                (u) => u.toLowerCase() === record.user.toLowerCase(),
-            ) || record.user;
+                // Find the user or create a new entry for them
+                const user = Object.keys(scoreMap).find(
+                    (u) => u.toLowerCase() === record.user.toLowerCase(),
+                ) || record.user;
 
-            scoreMap[user] ??= {
-                verified: [],
-                completed: [],
-                progressed: [],
-            };
+                scoreMap[user] ??= {
+                    verified: [],
+                    completed: [],
+                    progressed: [],
+                };
 
-            const { completed } = scoreMap[user];
-            completed.push({
-                rank: rank + 1,
-                level: level.name,
-                score: score(level.nlw_tier),
-                           link: record.link,
+                // Award the full NLW points to the player!
+                const { completed } = scoreMap[user];
+                completed.push({
+                    rank: rank + 1,
+                    level: level.name,
+                    score: score(level.nlw_tier),
+                               link: record.link,
+                });
             });
-        });
+        }
     });
 
 // Wrap in extra Object containing the user and total score
