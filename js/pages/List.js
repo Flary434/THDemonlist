@@ -45,6 +45,10 @@ export default {
                             <div class="type-title-sm">ID</div>
                             <p>{{ level.id }}</p>
                         </li>
+                        <li>
+                            <div class="type-title-sm">Tier</div>
+                            <p>{{ level.nlw_tier }}</p>
+                        </li>
                     </ul>
                     <h2>Records</h2>
                         <p v-if="selected + 1"><strong>100%</strong> or better to qualify</p>
