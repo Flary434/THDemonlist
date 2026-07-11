@@ -54,6 +54,14 @@ const TIER_POINTS = {
     "Catastrophic": 450,
     "Inexorable": 575,
     "Excruciating": 700,
+    "Merciless": 850,
+    "Monstrous": 1000,
+    "Apocalyptic": 1250,
+    "Demonic": 1500,
+    "Menacing": 2000,
+    "Unreal": 3000,
+    "Nightmare": 4000,
+    "Unfathomable": 5000,
 };
 
 /**
