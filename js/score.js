@@ -76,8 +76,3 @@ export function score(tier) {
 export function round(num) {
     return Math.max(0, Math.round(num));
 }
-
-export function round(num) {
-    let ret = Number(Math.round(num + "e3") + "e-3");
-    return ret < 0 ? 0 : ret;
-}
