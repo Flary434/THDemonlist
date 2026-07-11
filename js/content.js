@@ -58,49 +58,50 @@ export async function fetchLeaderboard() {
         }
 
         // Verification
-        const verifier = Object.keys(scoreMap).find(
-            (u) => u.toLowerCase() === level.verifier.toLowerCase(),
-        ) || level.verifier;
-        scoreMap[verifier] ??= {
-            verified: [],
-            completed: [],
-            progressed: [],
-        };
-        const { verified } = scoreMap[verifier];
-        verified.push({
-            rank: rank + 1,
-            level: level.name,
-            score: score(rank + 1, 100, level.percentToQualify),
-            link: level.verification,
-        });
+        const rawVerifier = level.verifier || level.first_victor || "";
+
+        if (rawVerifier !== "") {
+            const verifier = Object.keys(scoreMap).find(
+                (u) => u.toLowerCase() === rawVerifier.toLowerCase(),
+            ) || rawVerifier;
+
+            scoreMap[verifier] ??= {
+                verified: [],
+                completed: [],
+                progressed: [],
+            };
+            const { verified } = scoreMap[verifier];
+            verified.push({
+                rank: rank + 1,
+                level: level.name,
+                score: score(level.nlw_tier),
+                          link: level.verification,
+            });
+        }
 
         // Records
         level.records.forEach((record) => {
+            // Ignore anyone who doesn't have 100%
+            if (record.percent !== 100) {
+                return;
+            }
+
             const user = Object.keys(scoreMap).find(
                 (u) => u.toLowerCase() === record.user.toLowerCase(),
             ) || record.user;
+
             scoreMap[user] ??= {
                 verified: [],
                 completed: [],
                 progressed: [],
             };
-            const { completed, progressed } = scoreMap[user];
-            if (record.percent === 100) {
-                completed.push({
-                    rank: rank + 1,
-                    level: level.name,
-                    score: score(rank + 1, 100, level.percentToQualify),
-                    link: record.link,
-                });
-                return;
-            }
 
-            progressed.push({
+            const { completed } = scoreMap[user];
+            completed.push({
                 rank: rank + 1,
                 level: level.name,
-                percent: record.percent,
-                score: score(rank + 1, record.percent, level.percentToQualify),
-                link: record.link,
+                score: score(level.nlw_tier),
+                           link: record.link,
             });
         });
     });
